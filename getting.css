@@ -4,10 +4,35 @@ h1 {
 p,
 li {
   color: green;
-  list-style-type: none;
+  list-style-type: kannada;
 }
 
-li.special {
+li.special,
+span.special {
   color: orange;
   font-weight: bold;
+}
+
+.special {
+  color: black;
+}
+
+li em {
+  color: rebeccapurple;
+}
+
+.special em {
+  color: yellow;
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: yellow;
+}
+
+a:hover {
+  color: red;
 }
