@@ -1,38 +1,39 @@
 h1 {
-  color: red;
+    color: red;
 }
+
 p,
 li {
-  color: green;
-  list-style-type: kannada;
+    color: green;
+    list-style-type: kannada;
 }
 
 li.special,
 span.special {
-  color: orange;
-  font-weight: bold;
+    color: orange;
+    font-weight: bold;
 }
 
 .special {
-  color: black;
+    color: black;
 }
 
 li em {
-  color: rebeccapurple;
+    color: rebeccapurple;
 }
 
 .special em {
-  color: yellow;
+    color: yellow;
 }
 
 a:link {
-  color: black;
+    color: black;
 }
 
 a:visited {
-  color: yellow;
+    color: yellow;
 }
 
 a:hover {
-  color: red;
+    color: red;
 }

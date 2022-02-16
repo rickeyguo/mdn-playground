@@ -32,3 +32,18 @@ if (!localStorage.getItem("name")) {
 myButton.onclick = function() {
     setUserName();
 };
+
+function Person(name) {
+    this.name = name;
+    this.greeting = function() {
+        alert('HI! I am ' + this.name + ".");
+    };
+}
+
+let person1 = new Person('Bob');
+let target = document.querySelector("target")
+target.textContent =
+    person1.greeting()
+
+
+const name = 'Josh Persez'
