@@ -36,3 +36,9 @@ console.log(person);
 
 person.name = "Jammie";
 console.log(person);
+
+console.log("----");
+console.log(typeof testArr);
+console.log(arr);
+console.log(typeof arr);
+console.log(Array.isArray(arr));
