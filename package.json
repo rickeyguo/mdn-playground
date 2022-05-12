@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/rickeyguo/playground/issues"
   },
-  "homepage": "https://github.com/rickeyguo/playground#readme"
+  "homepage": "https://github.com/rickeyguo/playground#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
 }
