@@ -9,6 +9,23 @@ var usersRouter = require("./routes/users");
 
 var app = express();
 
+// --------------Connecting to MongoDB Atlas--------------
+const { MongoClient, ServerApiVersion } = require("mongodb");
+const uri =
+  "mongodb+srv://appa:<iycAQ2hn24yW61kE>@mongo.cldrg.mongodb.net/?retryWrites=true&w=majority";
+const client = new MongoClient(uri, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  serverApi: ServerApiVersion.v1,
+});
+client.connect((err) => {
+  const collection = client.db("test").collection("devices");
+  // perform actions on the collection object
+  //   client.close();
+  //
+});
+// ---------------------------
+
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
