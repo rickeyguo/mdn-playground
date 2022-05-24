@@ -10,21 +10,14 @@ var usersRouter = require("./routes/users");
 var app = express();
 
 // --------------Connecting to MongoDB Atlas--------------
-const { MongoClient, ServerApiVersion } = require("mongodb");
-const uri =
-  "mongodb+srv://appa:<iycAQ2hn24yW61kE>@mongo.cldrg.mongodb.net/?retryWrites=true&w=majority";
-const client = new MongoClient(uri, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  serverApi: ServerApiVersion.v1,
-});
-client.connect((err) => {
-  const collection = client.db("test").collection("devices");
-  // perform actions on the collection object
-  //   client.close();
-  //
-});
-// ---------------------------
+
+var mongoose = require("mongoose");
+var mongoDB =
+  "mongodb+srv://appa:TmT9SqY59ZVNNRqd@mongo.cldrg.mongodb.net/?retryWrites=true&w=majority";
+mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
+var db = mongoose.connection;
+db.on("error", console.error.bind(console, "MongoDB connection error:"));
+// -------------------------------------------------------
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
