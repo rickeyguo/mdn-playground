@@ -4,9 +4,11 @@ var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 
+// routers
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
-
+var catalogRouter = require("./routes/catalog"); //Import routes for "catalog" area of site
+//
 var app = express();
 
 // --------------Connecting to MongoDB Atlas--------------
@@ -31,6 +33,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
+app.use("/catalog", catalogRouter); // this prepend '/catalog' to all paths defined in the catalog module
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
